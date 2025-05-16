@@ -304,11 +304,33 @@ This may include repeated measures, inter-rater reliability assessments, or exte
 
 # Results
 
--   Present the results in a clear, concise, and logical manner.
--   Use tables and figures to effectively visualize the data. Ensure tables and figures are numbered and have descriptive captions.
--   Report relevant statistical results, including p-values, effect sizes, and confidence intervals.
--   Present the main findings first, followed by secondary findings.
--   Avoid repeating data in the text that is already presented in tables or figures, but highlight the most important trends and findings.
+## Sample Characteristics
+
+[bla bla bla].
+
+## Exercise-Induced Cardiac Autonomic Trajectory
+
+[bla bla bla].
+
+## B Cell Expression on Cardiac Autonomic-Immune Axis
+
+[bla bla bla].
+
+### CD21^+^ / CD11c^-^
+
+[bla bla bla].
+
+### CD21^+^ / CD11c^+^
+
+[bla bla bla].
+
+### CD21^-^ / CD11c^-^
+
+[bla bla bla].
+
+### CD21^-^ / CD11c^+^
+
+[bla bla bla].
 
 # Discussion
 

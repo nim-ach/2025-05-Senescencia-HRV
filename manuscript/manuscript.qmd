@@ -1,0 +1,504 @@
+---
+title: ""
+bibliography: "misc/ref.bib"
+csl: "misc/vancouver.csl"
+format: 
+  docx: 
+    reference-doc: "ref.docx"
+---
+
+**Title**: Different Cardiac Autonomic Trajectories in Response to Exercise-Induced Stress
+
+**Authors**: Matías Castillo-Aguilar,^1^ ..., Cristian Núñez-Espinosa,^1,2^ \*
+
+::: {custom-style="Afiliation"}
+^1^ Department/Affiliation, University/Institution, City, State/Province, Country
+
+^2^ Department/Affiliation, University/Institution, City, State/Province, Country
+:::
+
+### \*Correspondence
+
+Cristian Núñez-Espinosa, Escuela de Medicina, Universidad de Magallanes (UMAG), Punta Arenas, Chile. e-mail: [cristian.nunez\@umag.cl](mailto:cristian.nunez@umag.cl). Address: [Full Address]. Phone: [Phone Number].
+
+{{< pagebreak >}}
+
+## Abstract
+
+**Objective**: Briefly state the primary aim(s) of your research investigation.
+
+**Material and methods**: Briefly describe the overall research design, participants/samples, procedures, and data analysis methods.
+
+**Results**: Summarize the key findings of your study, including relevant data and statistical results.
+
+**Conclusion**: State the main conclusions drawn from your research and their significance.
+
+**Keywords**: List 3-5 keywords relevant to your research topic.
+
+{{< pagebreak >}}
+
+# Introduction
+
+<!--- 
+OPENING HOOK SUGGESTION: 
+Start with 2-3 sentences that link a clinically relevant syndrome/condition to an unresolved mechanistic question. 
+- Define the condition using 1-2 seminal citations. 
+- Highlight its epidemiological or public health burden. 
+- Introduce the core system/mechanism under investigation as the study's focus.
+--->
+[opening paragraph here...]
+
+<!--- 
+## 1. **Mechanistic Context & Knowledge Gaps**  
+
+### 1.1. Foundational Understanding  
+
+LAYER 1 SUGGESTION: 
+Summarize established foundational knowledge about the system/mechanism. 
+- Cite 2-3 key papers that define current consensus. 
+- Mention widely used metrics/tools in the field (e.g., "[METRIC] measures [PHENOMENON]").
+--->
+[established knowledge summary...]
+
+<!--- 
+### 1.2. Emerging Contradictions & Unanswered Questions  
+
+LAYER 2 SUGGESTION: 
+Highlight emerging contradictions or unanswered questions. Use contrastive language:
+- "While [X] is well-documented, [Y] remains controversial..."
+- "Recent studies suggest [Z], but fail to address [GAP]..."
+--->
+[gap identification...]
+
+<!--- 
+### 1.3. Methodological Limitations  
+
+LAYER 3 SUGGESTION: 
+Critique methodological limitations of current approaches. 
+- Explain why traditional tools/metrics are insufficient (e.g., "Static measures overlook [DYNAMIC PROCESS]"). 
+- Introduce the need for innovative methods (e.g., "[NEW METHOD] better captures [COMPLEXITY]").
+--->
+[methodological critique...]
+
+<!--- 
+## 2. **Methodological Rationale & Hypothesis**  
+
+### 2.1. Justification of Research Paradigm  
+
+TOOL 1 SUGGESTION: 
+Justify your ecologically/clinically relevant paradigm. 
+- Compare it to lab-based alternatives (e.g., "[REAL-WORLD ASSAY] mimics [CONDITION] better than [TRADITIONAL ASSAY]"). 
+- Cite validation studies if available.
+--->
+[paradigm justification...]
+
+<!--- 
+### 2.2. Innovative Analytical/Metric Approach  
+
+TOOL 2 SUGGESTION: 
+Explain your novel analytical/metric approach. 
+- Highlight how it addresses Layer 3 limitations (e.g., "[COMPOSITE INDEX] integrates [MULTI-SYSTEM SIGNALS]"). 
+- Cite technical validation papers.
+--->
+[method explanation...]
+
+<!--- 
+### 2.3. Hypothesis Formulation  
+
+HYPOTHESIS SUGGESTION: 
+Explicitly state how your approach resolves the gap. Use the formula:
+"By combining [TOOL 1] with [TOOL 2], this study tests the hypothesis that [CONDITION] disrupts [MECHANISM] through [PATHWAY]."
+--->
+[hypothesis statement...]
+
+<!--- 
+## 3. **Anticipated Impact & Translation**
+
+### 3.1. Mechanistic Impact  
+
+MECHANISTIC IMPACT SUGGESTION: 
+Explain how findings could refine fundamental understanding. Example:
+"Clarifying [X] may disentangle [Y] from [Z] in [SYSTEM], resolving long-standing debates about [CONTROVERSY]."
+--->
+[mechanistic impact...]
+
+<!--- 
+### 3.2. Clinical Translation  
+
+CLINICAL TRANSLATION SUGGESTION: 
+Link mechanisms to actionable insights. Example:
+"Identifying [BIOMARKER/PATHWAY] could guide [INTERVENTION] for [SUBGROUP], addressing [UNMET CLINICAL NEED]."
+--->
+[clinical translation...]
+
+<!--- 
+### 3.3. Paradigm Shift in Methodology  
+
+PARADIGM SHIFT SUGGESTION: 
+Highlight broader methodological implications. Example:
+"This [METHODOLOGY] bridges [DISCIPLINE 1] and [DISCIPLINE 2], enabling future studies of [COMPLEX PHENOMENA]."
+--->
+[paradigm shift...]
+
+<!--- 
+## 4. **Additional Considerations**  
+
+### 4.1. Rhetorical Devices & Integration  
+
+RHETORICAL DEVICES SUGGESTION: 
+- Use citation clusters thematically (e.g., group mechanistic studies separately from clinical papers). 
+- Employ contrastive syntax to emphasize gaps ("Although...", "However..."). 
+- Connect methods to hypotheses with bridging language ("To resolve this, we...").
+--->
+[narrative integration and rhetorical devices...]
+
+<!--- 
+Final Checklist for Blueprint Consistency 
+
+FINAL CHECKLIST: 
+- [ ] Hook ties condition to mechanism in ≤3 sentences 
+- [ ] Gap narrative progresses: Consensus → Contradictions → Method limitations 
+- [ ] Hypothesis explicitly links tools to the gap 
+- [ ] Impact addresses both basic science and translation
+--->
+
+# Material and Methods
+
+## Study Design
+
+### Overall Study Framework  
+<!---  
+Describe the general design of your study (e.g., experimental, observational, clinical trial, cohort study, cross-sectional study, case-control study).  
+Provide context for why this study type is most appropriate for addressing your research question.  
+--->
+[Your overall design description...]
+
+### Structural Specifics and Justification  
+<!---  
+Detail the specific structure of the study (e.g., randomized, placebo-controlled, blind, longitudinal, cross-sectional).  
+Explain the rationale behind choosing this structure, emphasizing its advantages over alternatives.  
+Include any necessary visual aids such as a flowchart to illustrate the study design (optional but recommended).  
+--->
+[Your detailed design and justification...]
+
+## Participants
+
+### Recruitment and Sampling Strategy  
+<!---  
+Describe the methods used for recruitment or sample acquisition (e.g., clinics, community outreach, database screening).  
+Outline the process for selecting participants to ensure a representative and unbiased sample.  
+--->
+[Your recruitment details...]
+
+### Inclusion and Exclusion Criteria  
+<!---  
+Specify clear inclusion and exclusion criteria for participants or samples to ensure the study’s internal validity.  
+Discuss any stratification or subgroup definitions if applicable.  
+--->
+[Your inclusion/exclusion criteria...]
+
+### Sample Size and Demographics  
+<!---  
+Provide the sample size and justification for its adequacy (e.g., through power analysis).  
+Describe key demographic characteristics (age, sex, ethnicity, etc.) and any variability considerations.  
+--->
+[Your sample size rationale and demographic details...]
+
+### Ethical Considerations  
+<!---  
+Document the ethical aspects of the study, including:  
+- Institutional review board (IRB) or ethics committee approval.  
+- Informed consent procedures.  
+- Compliance with animal welfare practices (if applicable).  
+--->
+[Your ethical procedures...]
+
+## Procedures
+
+### Experimental Protocols and Interventions  
+<!---  
+Provide a comprehensive description of all experimental protocols, treatments, interventions, and control conditions.  
+Detail key variables such as dosage, treatment duration, frequency, and administration method where relevant.  
+--->
+[Your experimental procedures...]
+
+### Standardization and Instrumentation  
+<!---  
+Explain the instruments or equipment used for measurements, including calibration and standardization procedures to ensure reproducibility.  
+Include details regarding the setup, maintenance, and quality assurance of these instruments.  
+--->
+[Your instrumentation details...]
+
+## Assessments
+
+### Assessment Strategy  
+<!---  
+Outline the assessments conducted as part of the study.  
+Explain how each assessment aligns with the study objectives and outcomes of interest.  
+--->
+[Your overall assessment strategy...]
+
+### Assessment Protocols
+
+#### Assessment 1  
+
+<!---  
+Describe the specific variable(s) being measured in the first assessment.  
+Detail the instrument(s) or techniques used, along with any calibration or validation steps.  
+Include quality control measures to ensure data reliability.  
+--->
+[Detailed description of Assessment 1.]
+
+#### Assessment 2  
+
+<!---  
+Elaborate on the second assessment using the same structured approach:  
+- Variable(s) measured  
+- Instrumentation and methodology  
+- Quality control and validation procedures  
+--->
+[Detailed description of Assessment 2.]
+
+#### Assessment 3  
+
+<!---  
+Provide a similar detailed protocol for a third assessment if applicable.  
+--->
+[Detailed description of Assessment 3.]
+
+## Statistical Analysis
+
+<!---  
+### 5.1. Data Analysis Methodology  
+
+Describe the overall statistical methods used to analyze the data.  
+List the specific statistical tests applied (e.g., Student's t-test, ANOVA, linear regression, etc.).  
+Outline how data distributions were assessed and any transformations applied.  
+--->
+[Your detailed data analysis methodology...]
+
+<!---  
+### 5.2. Software and Significance Criteria  
+
+Specify the statistical software and programming languages used (e.g., R, SPSS, SAS).  
+Indicate the level of statistical significance (e.g., p < 0.05) and any adjustments for multiple comparisons if applicable.  
+--->
+[Your software and significance details...]
+
+<!---  
+### 5.3. Handling Confounders and Robustness Checks  
+
+Discuss the methods used to control for potential confounding variables.  
+Include any sensitivity analyses or data robustness checks implemented to validate the results.  
+--->
+[Your methods to control confounders...]
+
+<!---  
+### 5.4. Data Quality Assurance  
+
+Outline the quality control procedures and verification methods for ensuring data integrity.  
+This may include repeated measures, inter-rater reliability assessments, or external validation steps.  
+--->
+[Your quality assurance protocols...]
+
+
+# Results
+
+-   Present the results in a clear, concise, and logical manner.
+-   Use tables and figures to effectively visualize the data. Ensure tables and figures are numbered and have descriptive captions.
+-   Report relevant statistical results, including p-values, effect sizes, and confidence intervals.
+-   Present the main findings first, followed by secondary findings.
+-   Avoid repeating data in the text that is already presented in tables or figures, but highlight the most important trends and findings.
+
+# Discussion
+
+<!--- 
+OPENING HOOK SUGGESTION: 
+Begin with 2-3 sentences that succinctly recapitulate the study’s principal findings. 
+- Frame the findings within the context of the initial research question. 
+- Emphasize the relevance of these results to current debates or clinical challenges.
+--->
+[opening paragraph here...]
+
+<!--- 
+## 1. **Interpretation & Integration of Findings**
+
+### 1.1. Summary of Key Results  
+
+SUMMARY SUGGESTION: 
+Recap the major outcomes of the study in a succinct manner. 
+- Highlight results that directly address the hypothesis.
+- Mention any quantitative or qualitative shifts observed.
+--->
+[summary of findings...]
+
+<!--- 
+### 1.2. Comparative Analysis with Existing Literature  
+
+COMPARISON SUGGESTION: 
+Contrast your findings with established studies. 
+- Identify similarities and divergences relative to prior reports.
+- Use precise citations to underline both agreements and differences.
+--->
+[literature comparison...]
+
+<!--- 
+### 1.3. Elucidation of Underlying Mechanisms  
+
+MECHANISTIC INTERPRETATION SUGGESTION: 
+Delve into the mechanistic implications of your findings. 
+- Explain how the data inform or challenge prevailing theories.
+- Highlight any novel mechanistic insights that emerge.
+--->
+[mechanistic interpretation...]
+
+<!--- 
+## 2. **Contextualizing Findings Within the Field**
+
+### 2.1. Alignment with Existing Models  
+
+MODEL INTEGRATION SUGGESTION: 
+Discuss how your results fit within current conceptual frameworks. 
+- Compare your approach and outcomes with traditional and emerging models.
+- Provide scholarly context through critical references.
+--->
+[analysis of model integration...]
+
+<!--- 
+### 2.2. Addressing Discrepancies and Controversies  
+
+CONTRAST & CONTROVERSY SUGGESTION: 
+Identify and elaborate on any inconsistencies between your data and previous studies. 
+- Use contrastive language to articulate divergent findings.
+- Discuss possible reasons (e.g., methodological differences or biological variability).
+--->
+[discussion on discrepancies...]
+
+<!--- 
+## 3. **Implications for Future Research**
+
+### 3.1. Methodological Refinements and Innovations  
+
+METHODOLOGICAL INSIGHTS SUGGESTION: 
+Critically examine the techniques used in your study. 
+- Discuss the strengths and limitations of your chosen methods.
+- Suggest potential improvements or alternative approaches for future studies.
+--->
+[methodological insights...]
+
+<!--- 
+### 3.2. Proposed Future Directions  
+
+FUTURE OUTLOOK SUGGESTION: 
+Outline new research questions or experiments that arise from your findings. 
+- Highlight gaps that need further investigation.
+- Propose additional studies to validate and extend your current work.
+--->
+[proposed future research directions...]
+
+<!--- 
+## 4. **Limitations and Alternative Interpretations**
+
+### 4.1. Technical and Experimental Constraints  
+
+LIMITATIONS SUGGESTION: 
+Provide a candid discussion of the study’s limitations. 
+- Address technical and methodological issues that may impact interpretation.
+- Reflect on sample size, assay specificity, or other constraints.
+--->
+[limitations discussion...]
+
+<!--- 
+### 4.2. Impact on Data Interpretation and Alternate Models  
+
+ALTERNATIVE INTERPRETATIONS SUGGESTION: 
+Discuss how these limitations might shape alternative views or interpretations of the data. 
+- Consider other variables or confounders that could explain your findings.
+- Suggest ways to mitigate these issues in follow-up studies.
+--->
+[analysis of alternative interpretations...]
+
+<!--- 
+## 5. **Concluding Synthesis and Translational Impact**
+
+### 5.1. Synthesis of Discussion Points  
+
+SYNTHESIS SUGGESTION: 
+Recap the integration of your findings with the broader literature. 
+- Summarize key insights and the advancement in mechanistic understanding.
+--->
+[synthesis of discussion points...]
+
+<!--- 
+### 5.2. Clinical and Translational Relevance  
+
+CLINICAL IMPLICATIONS SUGGESTION: 
+Highlight the practical implications of your findings for patient care or intervention strategies.
+- Discuss how these insights might influence clinical decision-making or therapeutic development.
+--->
+[clinical implications...]
+
+<!--- 
+### 5.3. Broader Impact and Future Perspectives  
+
+BROADER IMPLICATIONS SUGGESTION: 
+Emphasize the potential paradigm shifts your study may foster.
+- Outline how your findings could influence related fields or future multidisciplinary approaches.
+--->
+[broader impact discussion...]
+
+<!--- 
+## 6. **Additional Considerations & Final Checklist**
+
+### 6.1. Integration of Rhetorical Strategies  
+
+RHETORICAL DEVICES SUGGESTION: 
+Detail the use of linking language and structured argumentation to weave together contrasting points.
+- Emphasize clarity and logical progression throughout the discussion.
+--->
+[commentary on rhetorical strategies...]
+
+<!--- 
+Final Checklist for Discussion Section Integrity  
+
+FINAL CHECKLIST SUGGESTION: 
+- [ ] The discussion begins with a concise recap of key findings.
+- [ ] Comparative analysis is thorough and supported by citations.
+- [ ] Mechanistic insights are clearly articulated.
+- [ ] Limitations and alternative interpretations are transparently addressed.
+- [ ] Clinical and broader implications are cohesively integrated.
+--->
+
+# Conclusion
+
+-   Summarize the main conclusions of your study clearly and concisely.
+-   Emphasize the importance and significance of your findings.
+-   Avoid introducing new information or repeating details already discussed in the Results or Discussion sections.
+
+# References
+
+<div id="refs"></div>
+
+# Author Contributions
+
+Conceptualization, [...]; Data curation, [...]; Investigation, [...]; Methodology, [...]; Supervision, [...]; Formal analysis, [...]; Visualization, [...]; Writing–original draft, [...]; Writing–review & editing, [...]. All authors have read and agreed to the published version of the manuscript.
+
+# Funding
+
+This work was funded by [Funding institution] through [Project name] [Funding code/ID].
+
+# Institutional Review Board Statement
+
+Ethical approval was obtained from the Ethics Committee of the [Committee name] ([Document number]).
+
+# Informed Consent Statement
+
+All participants received detailed information regarding the study objectives, procedures, and potential implications. Informed consent was obtained to ensure ethical compliance and participant autonomy.
+
+# Data availability statement
+
+The raw data supporting the conclusions of this article will be made available by the authors without undue reservation.
+
+# Conflicts of interests
+
+The authors declare that the research was conducted without any commercial or financial relationships construed as as a potential conflict of interest.

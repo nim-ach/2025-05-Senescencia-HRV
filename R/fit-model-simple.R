@@ -148,7 +148,7 @@ p_mod_1_long[, variable2 := factor(
 fig_params_vs_immune <- ggplot(p_mod_1_long[!variable %in% c("abc_linfocitos_total", "abc_linfocitosb_total")], aes(value, response)) +
   facet_wrap(~ variable2, nrow = 2, labeller = label_parsed) +
   ggdist::stat_halfeye(aes(fill = after_stat(abs(x) > 0.1)), show.legend = FALSE) +
-  theme_classic(base_size = 20, base_rect_size = 2/3, base_line_size = 2/3) +
+  theme_classic(base_size = 14, base_rect_size = 2/3, base_line_size = 2/3) +
   scale_y_discrete(labels = scales::label_parse()) +
   scale_fill_manual(values = c("grey30","darkorange")) +
   labs(x = "Standardized effect", y = "Model parameters",
@@ -158,7 +158,7 @@ fig_params_vs_immune <- ggplot(p_mod_1_long[!variable %in% c("abc_linfocitos_tot
 
 ggsave(filename = "figures/fig_params_vs_immune_simple.pdf", 
        plot = fig_params_vs_immune, 
-       width = 7, height = 9)
+       width = 7, height = 7)
 
 # Signatures based on Z-quantiles -----------------------------------------
 
@@ -303,7 +303,7 @@ fig_rri_signatures <- ggplot(plot_data, aes(time, RRi, group = pred)) +
        title = "Dependent RRi Signatures",
        subtitle = "On CD21 and CD11c Immune Cell Markers",
        caption = "Unadjusted Effects") +
-  theme_classic(base_size = 20) +
+  theme_classic(base_size = 14) +
   theme(legend.position = "bottom")
 
 ggsave(filename = "figures/fig_rri_signatures_simple.pdf",

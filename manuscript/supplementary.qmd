@@ -1,0 +1,57 @@
+---
+title: "Supplementary Material"
+bibliography: "misc/ref.bib"
+csl: "misc/vancouver.csl"
+format: 
+  docx: 
+    reference-doc: "ref.docx"
+---
+
+**Title**: Immune-Derived Signatures of RR-Interval Dynamics: Predicting Autonomic Responses from CD21/CD11c B-Cell Subsets
+
+**Authors**: Matías Castillo-Aguilar,^1,2^ ..., Cristian Núñez-Espinosa,^1,2^ \*
+
+::: {custom-style="Afiliation"}
+^1^ Centro Asistencial Docente y de Investigación (CADI-UMAG), Punta Arenas, Chile.
+
+^2^ Escuela de Medicina, Universidad de Magallanes (UMAG), Punta Arenas, Chile
+:::
+
+### \*Correspondence
+
+Cristian Núñez-Espinosa, Escuela de Medicina, Universidad de Magallanes, Punta Arenas, Chile. Centro Asistencial de Docencia e Investigación CADI-UMAG, Chile. e-mail: [cristian.nunez\@umag.cl](mailto:cristian.nunez@umag.cl). Address: Avenida Bulnes 01855, Box 113-D. Phone: +56 61 2201411.
+
+{{< pagebreak >}}
+
+```{r}
+#| include: false
+
+## Load libraries
+library(brms)
+library(data.table)
+library(ggplot2)
+
+## Load auxiliary functions
+source("../R/_functions.R")
+
+normalize_text <- function(x) {
+    x <- stringi::stri_trans_general(x, "latin-ascii")
+    clipr::write_clip(x)
+    return(x)
+}
+
+## Load data objects
+data <- readRDS("../models/m_data.RDS") # Data used in the models
+m_sim <- readRDS("../models/m_mod_2.RDS") # Adjusted model
+m_adj <- readRDS("../models/m_mod_2.RDS") # Adjusted model
+```
+
+## Statistical Analysis
+
+For the estimation of 
+
+```{r}
+data
+```
+
+

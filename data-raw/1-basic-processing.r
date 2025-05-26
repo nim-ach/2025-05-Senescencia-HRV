@@ -90,8 +90,5 @@ senescence_d[, cd21_m_cd11c_m_porcentaje := NULL]
 senescence_d[, cd21_p_cd11c_m_porcentaje := NULL]
 senescence_d[, cd21_m_cd11c_p_porcentaje := NULL]
 
-## Ratio between p_p and m_m 
-senescence_d[, cd21_cd11c_p_m_ratio := cd21_p_cd11c_p / cd21_m_cd11c_m]
-
 ## Change subject with 57 to 67 (typo)
 senescence_d[age < 60, age := age + 10]

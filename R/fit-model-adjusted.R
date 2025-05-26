@@ -30,6 +30,9 @@ m_data <- senescence_d[, .SD[1], .SDcols = var_all, id]
 ## Standardize response variables
 m_data_std <- datawizard::standardize(m_data)
 
+## Save m_data for future post processing
+saveRDS(m_data, file = "models/m_data.RDS")
+
 ## Define the multivariate model with residual correlation
 m_formula <- 
   bf(alpha ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age) +
@@ -151,7 +154,7 @@ p_mod_2_long[, variable2 := factor(
 fig_params_vs_immune <- ggplot(p_mod_2_long[!variable %in% c("abc_linfocitos_total", "abc_linfocitosb_total")], aes(value, response)) +
   facet_wrap(~ variable2, nrow = 2, labeller = label_parsed) +
   ggdist::stat_halfeye(aes(fill = after_stat(abs(x) > 0.1)), show.legend = FALSE) +
-  theme_classic(base_size = 20, base_rect_size = 2/3, base_line_size = 2/3) +
+  theme_classic(base_size = 14, base_rect_size = 2/3, base_line_size = 2/3) +
   scale_y_discrete(labels = scales::label_parse()) +
   scale_fill_manual(values = c("grey30","darkorange")) +
   labs(x = "Standardized effect", y = "Model parameters",
@@ -161,7 +164,7 @@ fig_params_vs_immune <- ggplot(p_mod_2_long[!variable %in% c("abc_linfocitos_tot
 
 ggsave(filename = "figures/fig_params_vs_immune_adjusted.pdf", 
        plot = fig_params_vs_immune, 
-       width = 7, height = 9)
+       width = 7, height = 7)
 
 # Signatures based on Z-quantiles -----------------------------------------
 
@@ -308,7 +311,7 @@ fig_rri_signatures <- ggplot(plot_data, aes(time, RRi, group = pred)) +
        title = "Dependent RRi Signatures",
        subtitle = "On CD21 and CD11c Immune Cell Markers",
        caption = "Adjusted Effects for Sex and Age") +
-  theme_classic(base_size = 20) +
+  theme_classic(base_size = 14) +
   theme(legend.position = "bottom")
 
 ggsave(filename = "figures/fig_rri_signatures_adjusted.pdf",

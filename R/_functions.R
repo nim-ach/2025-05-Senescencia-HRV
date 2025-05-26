@@ -5,7 +5,7 @@ bf_01 <- function(x, prior_sigma) {
 }
 
 summary_posterior <- function(x, prior_sigma = 3) {
-  estimate = round(x = mean(x), digits = 2)
+  estimate = round(x = median(x), digits = 2)
   ci = round(x = tidybayes::hdi(x), digits = 2)
   ci = paste0("[", paste0(ci, collapse = ", "), "]")
   pd_side = if (estimate < 0) {x < 0} else {x > 0}
@@ -39,9 +39,9 @@ summary_model <- function(model, variable = NULL) {
 
 report_model <- function(model, variable = NULL) {
   m_report <- summary_model(model, variable)
-  m_report[!var %in% c(".chain", ".iteration", ".draw"), list(
-    effect = paste0("$\beta$ = ", estimate, ", CI~95%~", ci),
-    significance = paste0("pd = ", pd*100, "%, ps = ", ps*100, "%, BF~10~ = ", bf),
-    convergence = paste0("ESS = ", ess, ", R-hat = ", rhat)
+  m_report <- m_report[!var %in% c(".chain", ".iteration", ".draw"), list(
+    effect = paste0("ES = ", estimate, ", CI~95%~", ci),
+    significance = paste0("pd = ", pd*100, "%, ps = ", ps*100, "%")
   ), by = "var"][, var := gsub("_", " ", var)][]
+  m_report[, list(label = paste0(effect, ", ", significance)), by = "var"]
 }

@@ -46,9 +46,9 @@ m_sim <- readRDS("../models/m_mod_2.RDS") # Adjusted model
 m_adj <- readRDS("../models/m_mod_2.RDS") # Adjusted model
 ```
 
-## Statistical Analysis
+In the following sections, we present the parameter effects associated with the neuro-immune interaction and its effects on exercise-induced cardiac autonomic modulation.
 
-For the estimation of 
+## Unadjusted effects
 
 ```{r}
 data

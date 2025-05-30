@@ -42,16 +42,111 @@ normalize_text <- function(x) {
 
 ## Load data objects
 data <- readRDS("../models/m_data.RDS") # Data used in the models
-m_sim <- readRDS("../models/m_mod_2.RDS") # Adjusted model
+m_sim <- readRDS("../models/m_mod_1.RDS") # Adjusted model
 m_adj <- readRDS("../models/m_mod_2.RDS") # Adjusted model
 ```
 
-In the following sections, we present the parameter effects associated with the neuro-immune interaction and its effects on exercise-induced cardiac autonomic modulation.
+# Characterization of Model Estimates
+
+In the following sections, we present the model estimates associated with the neuro-immune interactions and its effects on exercise-induced cardiac autonomic modulation.
 
 ## Unadjusted effects
 
+First, we fitted a simple model without covariates. The standardized effects on the model parameters controlling the observed cardiac autonomic response to exercise can be seen in [Figure S1](#fig-s1) and [Table S1](#tab-s1), respectively.
+
+![](../figures/fig_params_vs_immune_simple.png){width=100%}
+[**Figure S1**]{#fig-s1}. Posterior distribution of the simple model on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of B-cell phenotypes quantities, CD21 and CD11c. The shaded area correspond to the range of practical equivalence (ROPE), denoted as 0.1 standardized units. $\alpha$, denotes the baseline RRi level at rest; $\beta$, denotes the exercise-induced drop in the RRi; $c$, denotes the recovery proportion, relative to $\beta$; $\lambda$ and $\phi$ denote the exercise-induced drop and recovery rate paramters; $\tau$ and $\delta$ denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
+
+[**Table S1**]{#tab-s1}. Model estimates on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of total, B and CD21 and CD11c B lymphocytes. Model effects are displayed unadjusted. *alpha*, denotes the baseline RRi level at rest; *beta*, denotes the exercise-induced drop in the RRi; *c*, denotes the recovery proportion, relative to *beta*; *lambda* and *phi* denote the exercise-induced drop and recovery rate paramters; *tau* and *delta* denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
 ```{r}
-data
+#| echo: false
+summary_model(m_sim, variable = "^b_")[-c(1:7),-6L] |> 
+  `names<-`(c("Parameter", "Estimate", "95% CI", "PD", "PS", "ESS", "R-hat")) |> 
+  transform(Parameter = gsub("_", " ", Parameter)) |> 
+  transform(Parameter = gsub("^b ", "", Parameter)) |> 
+  transform(Parameter = gsub("^rescor", "(rescor)", Parameter)) |> 
+  transform(Parameter = gsub(" Intercept", "", Parameter)) |> 
+  transform(Parameter = gsub("abc linfocitos total", "Total lymphocytes", Parameter)) |> 
+  transform(Parameter = gsub("abc linfocitosb total", "Total B lymphocytes", Parameter)) |> 
+  transform(Parameter = gsub("cd21 m cd11c p", "CD21 - CD11C +", Parameter)) |> 
+  transform(Parameter = gsub("cd21 p cd11c p", "CD21 + CD11C +", Parameter)) |> 
+  transform(Parameter = gsub("cd21 p cd11c m", "CD21 + CD11C -", Parameter)) |> 
+  transform(Parameter = gsub("cd21 m cd11c m", "CD21 - CD11C -", Parameter)) |> 
+  subset(!grepl(pattern = "^\\.", Parameter)) |> 
+  gt::gt()
 ```
 
+Moreover, the unadjusted residual correlations between model parameters are depicted in [Table S2](#tab-s2).
+
+[**Table S2**]{#tab-s2}. Estimates of the residual correlation between model parameters controlling the exercise-induced cardiac autonomic response. Model effects are displayed unadjusted. *alpha*, denotes the baseline RRi level at rest; *beta*, denotes the exercise-induced drop in the RRi; *c*, denotes the recovery proportion, relative to *beta*; *lambda* and *phi* denote the exercise-induced drop and recovery rate paramters; *tau* and *delta* denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
+```{r}
+#| echo: false
+summary_model(m_sim, variable = "^rescor_")[,-6L] |> 
+  `names<-`(c("Parameter", "Estimate", "95% CI", "PD", "PS", "ESS", "R-hat")) |> 
+  transform(Parameter = gsub("_", " ", Parameter)) |> 
+  transform(Parameter = gsub("^b ", "(b)", Parameter)) |> 
+  transform(Parameter = gsub("^rescor ", "", Parameter)) |> 
+  transform(Parameter = gsub(" Intercept", "", Parameter)) |> 
+  transform(Parameter = gsub("^\\s+", "", Parameter)) |> 
+  transform(Parameter = gsub("\\s+", " ~ ", Parameter)) |> 
+  subset(!grepl(pattern = "^\\.", Parameter)) |> 
+  gt::gt()
+```
+
+The predicted cardiac autonomic kinetics to the full rest-exercise-recovery dynamics can be observed in [Figure S2](#fig-s2).
+
+![](../figures/fig_rri_signatures_simple.png){width=100%}
+[**Figure S2**]{#fig-s2}. Predicted cardiac autonomic signatures display different patterns dependent on the amounts of CD21 and CD11c B cell phenotypes (standardized units) and their corresponding cell subsets. These predicted dynamics are unadjusted.
+
+## Adjusted effects
+
+Finally, the last fitted model was adjusted considering the influence of sex age, and body composition as covariates. The adjusted standardized effects on the model parameters controlling the observed cardiac autonomic response to exercise can be seen in [Figure S3](#fig-s3) and [Table S3](#tab-s3), respectively.
+
+![](../figures/fig_params_vs_immune_adjusted.png){width=100%}
+[**Figure S3**]{#fig-s3}. Posterior distributions of the adjusted model on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of B-cell phenotypes quantities, CD21 and CD11c. The shaded area correspond to the range of practical equivalence (ROPE), denoted as 0.1 standardized units. $\alpha$, denotes the baseline RRi level at rest; $\beta$, denotes the exercise-induced drop in the RRi; $c$, denotes the recovery proportion, relative to $\beta$; $\lambda$ and $\phi$ denote the exercise-induced drop and recovery rate paramters; $\tau$ and $\delta$ denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
+
+[**Table S3**]{#tab-s3}. Model estimates on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of total, B and CD21 and CD11c B lymphocytes. Model effects are displayed adjusted by sex, age and body composition. *alpha*, denotes the baseline RRi level at rest; *beta*, denotes the exercise-induced drop in the RRi; *c*, denotes the recovery proportion, relative to *beta*; *lambda* and *phi* denote the exercise-induced drop and recovery rate paramters; *tau* and *delta* denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
+```{r}
+#| echo: false
+summary_model(m_adj, variable = "^b_")[-c(1:7),-6L] |> 
+  `names<-`(c("Parameter", "Estimate", "95% CI", "PD", "PS", "ESS", "R-hat")) |> 
+  transform(Parameter = gsub("_", " ", Parameter)) |> 
+  transform(Parameter = gsub("^b ", "", Parameter)) |> 
+  transform(Parameter = gsub("^rescor", "(rescor)", Parameter)) |> 
+  transform(Parameter = gsub(" Intercept", "", Parameter)) |> 
+  transform(Parameter = gsub("sexM", "sex [Male]", Parameter)) |> 
+  transform(Parameter = gsub("age", "Age", Parameter)) |> 
+  transform(Parameter = gsub("fat total", "Body fat", Parameter)) |> 
+  transform(Parameter = gsub("muscle total", "Muscle mass", Parameter)) |> 
+  transform(Parameter = gsub("abc linfocitos total", "Total lymphocytes", Parameter)) |> 
+  transform(Parameter = gsub("abc linfocitosb total", "Total B lymphocytes", Parameter)) |> 
+  transform(Parameter = gsub("cd21 m cd11c p", "CD21 - CD11C +", Parameter)) |> 
+  transform(Parameter = gsub("cd21 p cd11c p", "CD21 + CD11C +", Parameter)) |> 
+  transform(Parameter = gsub("cd21 p cd11c m", "CD21 + CD11C -", Parameter)) |> 
+  transform(Parameter = gsub("cd21 m cd11c m", "CD21 - CD11C -", Parameter)) |> 
+  subset(!grepl(pattern = "^\\.", Parameter)) |> 
+  gt::gt()
+```
+
+Additionally, the residual correlations between model parameters from the adjusted model are illustrated in [Table S4](#tab-s4).
+
+[**Table S4**]{#tab-s4}. Estimates of the residual correlation between model parameters controlling the exercise-induced cardiac autonomic response. Model effects are displayed adjusted by sex and age. *alpha*, denotes the baseline RRi level at rest; *beta*, denotes the exercise-induced drop in the RRi; *c*, denotes the recovery proportion, relative to *beta*; *lambda* and *phi* denote the exercise-induced drop and recovery rate paramters; *tau* and *delta* denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
+```{r}
+#| echo: false
+summary_model(m_adj, variable = "^rescor_")[,-6L] |> 
+  `names<-`(c("Parameter", "Estimate", "95% CI", "PD", "PS", "ESS", "R-hat")) |> 
+  transform(Parameter = gsub("_", " ", Parameter)) |> 
+  transform(Parameter = gsub("^b ", "(b)", Parameter)) |> 
+  transform(Parameter = gsub("^rescor ", "", Parameter)) |> 
+  transform(Parameter = gsub(" Intercept", "", Parameter)) |> 
+  transform(Parameter = gsub("^\\s+", "", Parameter)) |> 
+  transform(Parameter = gsub("\\s+", " ~ ", Parameter)) |> 
+  subset(!grepl(pattern = "^\\.", Parameter)) |> 
+  gt::gt()
+```
+
+Moreover, the predicted cardiac autonomic kinetics to the full rest-exercise-recovery dynamics, adjusted by confounders, can be observed in [Figure S4](#fig-s4).
+
+![](../figures/fig_rri_signatures_adjusted.png){width=100%}
+[**Figure S4**]{#fig-s4}. Predicted cardiac autonomic signatures display different patterns dependent on the amounts of CD21 and CD11c B cell phenotypes (standardized units) and their corresponding cell subsets. These predicted dynamics are adjusted for sex and age. 
 

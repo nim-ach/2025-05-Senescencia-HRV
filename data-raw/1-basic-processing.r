@@ -5,7 +5,7 @@
 library(data.table)
 
 ## Import the immune data
-data <- fread(file = "data-raw/raw-data.csv")
+data <- fread(file = "data-raw/raw-data-2.csv")
 
 # Append the RRi data -----------------------------------------------------
 
@@ -49,7 +49,7 @@ data[, (rm_vars) := NULL]
 data[, id := rleid(name)]
 
 ## Remove identifying variables
-rm_vars <- grep("email|rut|phone|record|code|redcap|name", names(data), value = TRUE)
+rm_vars <- grep("email|rut|phone|record|code|redcap|name|timestamp|surgery|drugs|disease|_cat", names(data), value = TRUE)
 data[, (rm_vars) := NULL]
 
 ## Remove missing cases from the immune dataset
@@ -92,3 +92,10 @@ senescence_d[, cd21_m_cd11c_p_porcentaje := NULL]
 
 ## Change subject with 57 to 67 (typo)
 senescence_d[age < 60, age := age + 10]
+
+## Fix height in wrong scale
+senescence_d[height < 2, height := height * 100]
+senescence_d[height == 60, height := 160]
+
+## Recompute bmi considering previous amendments
+senescence_d[, imc := weight/((height/100)^2)]

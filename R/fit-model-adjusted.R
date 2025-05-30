@@ -20,7 +20,7 @@ var_predictors <- c("abc_linfocitos_total", "abc_linfocitosb_total",
                     "cd21_p_cd11c_m","cd21_m_cd11c_m")
 
 # Covariables
-var_cov <- c("sex", "age")
+var_cov <- c("sex", "age", "weight", "height", "imc", "muscle_total", "fat_total")
 
 var_all <- c(var_response, var_predictors, var_cov)
 
@@ -35,13 +35,13 @@ saveRDS(m_data, file = "models/m_data.RDS")
 
 ## Define the multivariate model with residual correlation
 m_formula <- 
-  bf(alpha ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age) +
-  bf(beta ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age) +
-  bf(c ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age) +
-  bf(lambda ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age) +
-  bf(phi ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age) +
-  bf(tau ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age) +
-  bf(delta ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age) +
+  bf(alpha ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age + fat_total + muscle_total) +
+  bf(beta ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age + fat_total + muscle_total) +
+  bf(c ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age + fat_total + muscle_total) +
+  bf(lambda ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age + fat_total + muscle_total) +
+  bf(phi ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age + fat_total + muscle_total) +
+  bf(tau ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age + fat_total + muscle_total) +
+  bf(delta ~ abc_linfocitos_total + abc_linfocitosb_total + cd21_m_cd11c_p + cd21_m_cd11c_m + cd21_p_cd11c_m + cd21_p_cd11c_p + sex + age + fat_total + muscle_total) +
   set_rescor(TRUE)
 
 ## Check what are the default priors
@@ -88,11 +88,12 @@ bayestestR::describe_posterior(m_mod_2)
 # Create parameters ~ immune plot -----------------------------------------
 
 ## Model to data object
-p_mod_2 <- as_draws_df(m_mod_2) |> 
+p_mod_2 <- 
+  as_draws_df(m_mod_2) |> 
   as.data.table()
 
 ## Select only principal effects
-p_vars <- grep("Intercept|rescor|^lp|sigma|age|sexM", names(p_mod_2), value = TRUE, invert = TRUE)
+p_vars <- grep("Intercept|rescor|^lp|sigma|age|sexM|fat|muscle", names(p_mod_2), value = TRUE, invert = TRUE)
 p_mod_2 <- p_mod_2[, .SD, .SDcols = p_vars]
 
 ## Adapt data object to long format for ease of plotting
@@ -160,10 +161,14 @@ fig_params_vs_immune <- ggplot(p_mod_2_long[!variable %in% c("abc_linfocitos_tot
   labs(x = "Standardized effect", y = "Model parameters",
        title = "Effect of Immune Markers",
        subtitle = "On Model Parameters Affecting RRi Dynamics",
-       caption = "Adjusted Effects for Sex and Age")
+       caption = "Effects are adjusted for sex, age and body composition")
 
 ggsave(filename = "figures/fig_params_vs_immune_adjusted.pdf", 
        plot = fig_params_vs_immune, 
+       width = 7, height = 7)
+ggsave(filename = "figures/fig_params_vs_immune_adjusted.png", 
+       plot = fig_params_vs_immune, 
+       dpi = 400,
        width = 7, height = 7)
 
 # Signatures based on Z-quantiles -----------------------------------------
@@ -186,7 +191,8 @@ generate_epred_params <- function(abc_linfocitos_total = 0,
                                         cd21_m_cd11c_p = cd21_m_cd11c_p,
                                         cd21_p_cd11c_m = cd21_p_cd11c_m,
                                         cd21_p_cd11c_p = cd21_p_cd11c_p,
-                                        sex = NA, age = 0
+                                        sex = NA, age = 0,
+                                        fat_total = 0, muscle_total = 0
                                       ),
                                       allow_new_levels = TRUE) |> 
     as.data.table()
@@ -310,10 +316,14 @@ fig_rri_signatures <- ggplot(plot_data, aes(time, RRi, group = pred)) +
        col = "Cell count (Z-score)",
        title = "Dependent RRi Signatures",
        subtitle = "On CD21 and CD11c Immune Cell Markers",
-       caption = "Adjusted Effects for Sex and Age") +
+       caption = "Effects are adjusted for sex, age and body composition") +
   theme_classic(base_size = 14) +
   theme(legend.position = "bottom")
 
 ggsave(filename = "figures/fig_rri_signatures_adjusted.pdf",
        plot = fig_rri_signatures,
+       width = 7, height = 9)
+ggsave(filename = "figures/fig_rri_signatures_adjusted.png",
+       plot = fig_rri_signatures,
+       dpi = 400,
        width = 7, height = 9)

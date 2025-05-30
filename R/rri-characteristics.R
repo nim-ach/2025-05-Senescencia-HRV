@@ -48,7 +48,8 @@ pred_data <- tidybayes::epred_draws(object = m_mod_2,
                                       cd21_m_cd11c_p = 0,
                                       cd21_p_cd11c_m = 0,
                                       cd21_p_cd11c_p = 0,
-                                      sex = NA, age = 0
+                                      sex = NA, age = 0,
+                                      muscle_total = 0, fat_total = 0
                                     ),
                                     allow_new_levels = TRUE) |> 
   as.data.table()
@@ -73,10 +74,10 @@ pred_data[, list(Estimate = round(x = median(value), digits = 2),
           list(Parameters = .category)]
 #>    Parameters Estimate    SE               CI
 #>        <fctr>    <num> <num>           <char>
-#> 1:      alpha   876.89 15.29 [845.45, 906.55]
-#> 2:       beta   386.64 17.99 [350.97, 420.27]
-#> 3:          c     0.90  0.02     [0.86, 0.93]
-#> 4:     lambda     2.96  0.16     [2.63, 3.26]
-#> 5:        phi     2.29  0.20     [1.91, 2.69]
-#> 6:        tau     6.75  0.08     [6.58, 6.91]
-#> 7:      delta     2.47  0.08      [2.3, 2.62]
+#> 1:      alpha   884.77 21.60 [840.27, 925.77]
+#> 2:       beta   403.99 24.57  [355.6, 451.58]
+#> 3:          c     0.89  0.02     [0.84, 0.94]
+#> 4:     lambda     3.01  0.22     [2.57, 3.44]
+#> 5:        phi     2.18  0.27     [1.63, 2.71]
+#> 6:        tau     6.89  0.11     [6.66, 7.11]
+#> 7:      delta     2.50  0.11     [2.28, 2.72]

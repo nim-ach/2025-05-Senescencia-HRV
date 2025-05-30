@@ -159,6 +159,10 @@ fig_params_vs_immune <- ggplot(p_mod_1_long[!variable %in% c("abc_linfocitos_tot
 ggsave(filename = "figures/fig_params_vs_immune_simple.pdf", 
        plot = fig_params_vs_immune, 
        width = 7, height = 7)
+ggsave(filename = "figures/fig_params_vs_immune_simple.png", 
+       plot = fig_params_vs_immune, 
+       dpi = 400,
+       width = 7, height = 7)
 
 # Signatures based on Z-quantiles -----------------------------------------
 
@@ -308,4 +312,8 @@ fig_rri_signatures <- ggplot(plot_data, aes(time, RRi, group = pred)) +
 
 ggsave(filename = "figures/fig_rri_signatures_simple.pdf",
        plot = fig_rri_signatures,
+       width = 7, height = 9)
+ggsave(filename = "figures/fig_rri_signatures_simple.png",
+       plot = fig_rri_signatures,
+       dpi = 400,
        width = 7, height = 9)

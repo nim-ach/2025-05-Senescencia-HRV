@@ -49,7 +49,7 @@ data[, (rm_vars) := NULL]
 data[, id := rleid(name)]
 
 ## Remove identifying variables
-rm_vars <- grep("email|rut|phone|record|code|redcap|name|timestamp|surgery|drugs|disease|_cat", names(data), value = TRUE)
+rm_vars <- grep("email|phone|record|code|redcap|timestamp|name|surgery|drugs|disease|_cat", names(data), value = TRUE)
 data[, (rm_vars) := NULL]
 
 ## Remove missing cases from the immune dataset
@@ -99,3 +99,6 @@ senescence_d[height == 60, height := 160]
 
 ## Recompute bmi considering previous amendments
 senescence_d[, imc := weight/((height/100)^2)]
+
+senescence_d[, .SD[1], id][, list(phase_date, rut, id)] |> 
+  fwrite(file = "data-raw/phase_rut.csv")

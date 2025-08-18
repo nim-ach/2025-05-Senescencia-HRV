@@ -9,12 +9,17 @@ format:
 
 **Title**: Immune-Derived Signatures of RR-Interval Dynamics: Predicting Autonomic Responses from CD21/CD11c B-Cell Subsets
 
-**Authors**: Matías Castillo-Aguilar,^1,2^ ..., Cristian Núñez-Espinosa,^1,2^ \*
+**Authors**: Matías Castillo-Aguilar^1,2^, Ginés Viscor^3^, Lindybeth Sarmiento^1,2^, Julieta Sepúlveda^1,4^, Marcelo Navarrete^1,2^, Cristian Núñez-Espinosa^1,2^ \*
 
 ::: {custom-style="Afiliation"}
 ^1^ Centro Asistencial Docente y de Investigación (CADI-UMAG), Punta Arenas, Chile.
 
-^2^ Escuela de Medicina, Universidad de Magallanes (UMAG), Punta Arenas, Chile
+^2^ Escuela de Medicina, Universidad de Magallanes (UMAG), Punta Arenas, Chile.
+
+^3^ Physiology Section, Department of Cell Biology, Physiology and
+Immunology, Faculty of Biology, Universitat de Barcelona, Barcelona, Spain.
+
+^4^ Facultad de Ciencias de la Salud, Universidad de Magallanes (UMAG), Punta Arenas, Chile.
 :::
 
 ### \*Correspondence
@@ -25,13 +30,13 @@ Cristian Núñez-Espinosa, Escuela de Medicina, Universidad de Magallanes, Punta
 
 ## Abstract
 
-**Objective**: This study aimed to investigate how specific B-cell subpopulations, CD21^+^/CD11c^+^ and CD21^-^/CD11c^-^, influence autonomic nervous system (ANS) dynamics, as measured by heart rate variability (HRV), in response to acute exercise in older adults.
+**Objective**: This study aimed to investigate how aging B-cell subpopulations correlate with autonomic nervous system (ANS) dynamics, as measured by heart rate variability (HRV), in response to acute exercise in older adults.
 
 **Material and Methods**: Using a cross-sectional design, 81 community-dwelling older adults (mean age 70.7 ± 5.8 years) underwent immune profiling to quantify total B cells and four CD21/CD11c phenotypes. Continuous R-R interval (RRi) data were recorded at rest, during a Two-Minute Step Test (TMST), and over a five-minute recovery period. A coupled-logistic RRi-vs-time model yielded seven kinetic parameters per participant. Individual parameter estimates were regressed on standardized immune predictors using multivariate Bayesian models, adjusting for age, sex and body composition variables.
 
-**Results**: Higher counts of CD21^+^/CD11c^+^ B cells were associated with elevated baseline RRi (resting vagal tone), an increased exercise-induced RRi drop, and an incomplete post-exercise recovery (posterior probability > 90%). Conversely, greater CD21^-^/CD11c^- B-cell counts related with lower resting RRi, a pronounced sympathetic-driven RRi decrease during exercise, and more complete vagal reactivation during recovery (posterior probability > 90%).
+**Results**: Higher counts of CD21^+^CD11c^+^ B cells were associated with elevated baseline RRi (resting vagal tone), an increased exercise-induced RRi drop, and an incomplete post-exercise recovery (posterior probability > 90%). Conversely, greater CD21^-^CD11c^-^ B-cell counts related with lower resting RRi, a pronounced sympathetic-driven RRi decrease during exercise, and more complete vagal reactivation during recovery (posterior probability > 90%).
 
-**Conclusion**: CD21^+^/CD11c^+^ and CD21^-^/CD11c^-^ B-cell subsets exhibit divergent influences on ANS responsiveness to acute exercise in older adults. An integrative neuro-immunological approach may identify biomarkers of resilience or fragility, potentially informing personalized interventions to optimize cardiovascular health in aging.
+**Conclusion**: Absolute counts of CD21^+^CD11c^+^ and CD21^-^CD11c^-^ aging B-cell subsets are differentially associated with ANS responsiveness to acute exercise in older adults. This data suggests immunosenescence-linked autonomic dysregulation. An integrative neuro-immunological approach may identify biomarkers of resilience or fragility, potentially informing personalized interventions to optimize cardiovascular health in aging.
 
 **Keywords**: B Cells; Heart Rate Variability; Autonomic Nervous System; Aging; Exercise.
 
@@ -39,33 +44,29 @@ Cristian Núñez-Espinosa, Escuela de Medicina, Universidad de Magallanes, Punta
 
 # Introduction
 
-The intricate interplay between the nervous and immune systems, often referred to as the neuro-immunological axis, is fundamental for maintaining physiological homeostasis and providing neuroprotection [@bonaz2017vagus]. Within this axis, the autonomic nervous system (ANS), with its sympathetic (SNS) and parasympathetic (PNS) branches, plays a pivotal role in bidirectional communication. Through the release of neurotransmitters such as norepinephrine (NE) and acetylcholine (ACh), the ANS modulates cardiovascular, metabolic, and immune functions. NE, released by sympathetic efferents, acts via $\alpha$- and $\beta$-adrenergic receptors to prepare the organism for action by increasing heart rate and vascular tone [@benarroch2020physiology]. Conversely, ACh, released by the vagus nerve, slows cardiac rhythm through muscarinic and nicotinic receptors, promoting energy conservation and anti-inflammatory effects [@benarroch2020physiology]. Immune cells express these receptor types, rendering them functional targets of autonomic regulation. Moreover, B and T lymphocytes can synthesize ACh via choline acetyltransferase, contributing to a non-neuronal cholinergic system within lymphoid tissues [@halder2021cholinergic].
+The intricate interplay between the nervous and immune systems, commonly referred to as the neuro-immunological axis, is fundamental for maintaining physiological homeostasis, ensuring effective responses to stressors and regulating immune responses [@bonaz2017vagus]. The autonomic nervous system (ANS), composed of sympathetic (SNS) and parasympathetic (PNS) branches, mediates bidirectional communication with the immune system. Immune derived cytokines can influence neurotransmitter release, synaptic plasticity and endocrine regulation, while in turn, autonomic pathways modulate immune cell trafficking and activation [@porter2022brain; @elia2023autonomic].
 
-The bidirectional nature of this axis implies that the ANS can modulate immune cell differentiation, cytokine production, and antibody responses, while in turn, immune mediators such as cytokines influence autonomic tone [@jacobson2021intestinal]. Among autonomic pathways, the vagus nerve plays a key role in limiting inflammation via the cholinergic anti-inflammatory reflex, which suppresses peripheral cytokine release, particularly tumor necrosis factor alpha (TNF-$\alpha$), in response to inflammatory stimuli [@tracey2002inflammatory; @bonaz2017vagus]. Disruption of this balance contributes to pathological processes including cardiovascular, metabolic, and neurodegenerative diseases [@giunta2024autonomic].
+While this neuroimmune crosstalk is essential for acute responses to infection and injury, aging disrupts both systems. Immunosenescence, a hallmark of aging, encompasses widespread impairments in innate and adaptative immunity, including diminished output of naïve T and B cells, reduced vaccine responsiveness, and a chronic low-grade inflammatory state known as "inflammaging" [@jurcau2024inflammaging]. Persistent inflammatory signaling and impaired regulatory control may place sustained pressure on autonomic circuits. Conversely, autonomic dysfunction may actively shape age-related immune phenotypes [@jiang2022role; @giunta2024autonomic]. Aging, also shifts autonomic balance toward sympathetic dominance and reduced vagal tone, weakining the anti-inflammatory potential of parasimpathetic signaling [@giunta2024autonomic]. Together, these dysruptions may lower physiological resilience and contribute to chronic disease.
 
-Aging alters both arms of this axis. On the immune side, immunosenescence manifests as diminished antigenic responsiveness, reduced naive lymphocyte pools, and an increased burden of memory and senescent immune cells, leading to a chronic low-grade inflammatory state, "inflammaging", marked by elevated circulating cytokines even in the absence of acute infection [@barrera2017inmunosenescencia; @frasca2023obesity; @giunta2024autonomic]. In parallel, the autonomic profile of older adults tends to shift toward sympathetic predominance and diminished parasympathetic tone, blunting the anti-inflammatory potential of vagal activity [@giunta2024autonomic]. These age-associated shifts not only increase susceptibility to chronic inflammatory conditions but also diminish physiological adaptability to external stressors by impairing the balanced responsiveness of the neuro-immunological axis.
+Within this framework, B lymphocytes warrant particular attention. In addition to antibody production, B cells function as antigen-presenting cells and cytokine producers, influencing inflammatory and neuroimmune dynamics [@wang2020b; @engler2024b]. With aging, the B cell compartment undergoes marked phenotypic shifts, including reduced naïve cells and increased memory and atypical subsets, such as age-associated B cells (ABCs). Immunophenotyping of B cells based on CD21 and CD11c expression allows for the delineation of functionally distinct B cell subsets: CD21⁻CD11c⁺ cells (ABCs), CD21⁺CD11c⁻ (naïve/resting memory), CD21⁺CD11c⁺ (activated memory), and CD21⁻CD11c⁻ (putatively anergic or dysfunctional) [@rincon2021deep]. CD11c+ B cells, often classified as ABCs, display pro-inflammatory transcriptional profiles, including robust expression of T-bet and Blimp-1, and are expanded in contexts such as aging, autoimmunity, and chronic infections [@golinski2020cd11c]. CD21, a complement receptor typically expressed on follicular B cells but is downregulated in chronically stimulated, anergic, or functionally exhausted B cell subsets, serving as a phenotypic marker of antigen exposure and altered functional state [@del2020rheumatoid]. These immunophenotypic distinctions may serve as insights into the immune system aging and may correlates of functional immune competence or dysfunction. 
 
-Physical activity is a potent modulator of this dysregulation. Habitual exercise enhances vagal tone, increases heart rate variability (HRV), and reduces systemic inflammation [@olivieri2024heart]. From an immunological perspective, regular activity is associated with a more balanced T and B cell phenotype, including higher proportions of naive lymphocytes and reduced senescent subsets [@weyh2020physical; @tylutka2021lifestyle]. Exercise can thus be conceptualized as a physiological probe of neuroimmune flexibility, where the dynamic response of autonomic and immune markers reveals latent regulatory capacity.
+Emerging evidence suggests that immune status may influence autonomic tone, and vice versa. Lymphocytes express receptors for neurotransmitters such as norepinephrine and acetylcholine via adrenergic and cholinergic receptors, and can even produce acetylcholine themselves highlighting a non-neuronal cholinergic signaling network within lymphoid tissue [@halder2021cholinergic; @jacobson2021intestinal]. The vagus nerve plays a key role in immune regulation through to via cholinergic anti-inflammatory reflex, which suppresses cytokine release during systemic inflammation [@bonaz2017vagus; @tracey2002inflammatory]. Disruption of this balance is implicated in cardiovascular, metabolic, and neurodegenerative conditions [@giunta2024autonomic]. Aging compounds these disruptions by simultaneously reducing parasympathetic tone, promoting sympathetic dominance, and perpetuating systemic inflammation [@giunta2024autonomic; @barrera2017inmunosenescencia; @frasca2023obesity]. This shift reduces the resilience of the neuro-immune axis to respond to physiological stressors
 
-In this context, B lymphocytes warrant particular attention. Beyond their role in antibody production, B cells function as antigen-presenting cells and cytokine producers, exerting both pro- and anti-inflammatory effects [@wang2020b]. Recent studies indicate that B cells also influence neural function and may contribute to neuroinflammatory conditions [@engler2024b]. With aging, the B cell compartment undergoes phenotypic remodeling, characterized by a decline in naive cells and expansion of memory and atypical populations. Among these, CD11c^+^ B cells, often termed age-associated B cells (ABCs), are enriched for pro-inflammatory and autoimmune signatures [@golinski2020cd11c]. They express transcriptional profiles associated with antigen experience and differentiation, including heightened expression of T-bet and Blimp-1. The co-expression of CD21, a complement receptor, provides further phenotypic granularity. CD21 is typically expressed on follicular B cells, but chronic immune stimulation can lead to its downregulation, indicating an exhausted or anergic state [@del2020rheumatoid].
+Physical activity is a powerful modulator of both autonomic and immune function in older adults. Regular exercise improves vagal tone, enhances heart rate variability (HRV), and reduces systemic inflammation [@benarroch2020physiology; @olivieri2024heart]. Immunologically, it is associated with a more balanced T and B cell phenotype, including higher proportions of naïve lymphocytes and reduced senescent subsets [@weyh2020physical; @tylutka2021lifestyle]. HRV analysis during and after submaximal exercise provides a non-invasive probe of autonomic adaptability [@castillo2023validity; @castillo2025enhancing]. Parametric modeling of HRV trajectories allows for individualized assessments of autonomic dynamics, capturing features such as recovery and flexibility [@castillo2025enhancing]. This set of parameters conforms an individual's Cardiac Autonomic Signature (CAS).
 
-Understanding the functional implications of these B cell subtypes in older adults may offer new insights into the coordination between immune aging and autonomic adaptability. During exercise, the ANS orchestrates a coordinated response involving sympathetic activation during exertion and parasympathetic reactivation during recovery. These changes are reflected in HRV, a time-domain measure of RR interval variability. High vagal tone is associated with greater HRV at rest and more rapid recovery post-exertion, whereas sympathetic dominance produces reduced HRV and delayed recovery [@castillo2023validity; @castillo2025enhancing].
-
-Recent work has introduced parametric models to quantify individual differences in autonomic dynamics during and after exercise. These models extract parameters such as baseline HRV and recovery slope, which are thought to index autonomic flexibility and resilience [@castillo2025enhancing]. However, the immunological correlates of these parameters, particularly in older adults, remain poorly defined.
-
-This study investigates whether baseline proportions of specific B cell subtypes, particularly CD21^+^/CD11c^+^ and CD21^-^/CD11c^-^ populations, are associated with interindividual differences in autonomic trajectories following submaximal exercise in older adults. By integrating immunophenotyping with HRV-based modeling of autonomic responses, we aim to elucidate how immune senescence interfaces with autonomic regulation. This may inform the identification of predictive biomarkers of physiological resilience and guide interventions targeting healthy aging.
+Understanding how immune B cell phenotypes, especially those altered with aging influence autonomic dynamics adaptability, could provide new insights into physiological resilience in older adults. We hypothesize that distinct B cell subpopulations, particularly CD21^+^CD11c^+^ and CD21^-^CD11c^-^ phenotypes, are associated with interindividual differences in autonomic adaptability during submaximal exercise in older adults. By integrating high-resolution immunophenotyping with dynamic modeling of heart rate variability, this study aims to identify immune correlates of autonomic resilience, advancing a novel insight into the bidirectional interplay between immune aging and CAS regulation.
 
 # Material and Methods
 
 ## Study Design
 
-To explore the influence of CD21^+^/CD11c^+^ and CD21^-^/CD11c^-^ B cell subpopulations on autonomic dynamics, this study employed an observational, correlational, and cross-sectional design. This cross-sectional approach involved collecting data at a single time point, which enabled the examination of associations between the variables of interest.
+This study employed an observational, correlational, and cross-sectional design, with a single time point data collection.
 
 Prior to any data acquisition, all participants received a comprehensive explanation of the study's aims, procedures, and potential outcomes. In adherence to ethical standards and to ensure respect for individual autonomy, informed consent was obtained from each participant.
 
 ## Setting
 
-This study took place at the Centro Asistencial Docente e Investigacion (CADI-UMAG), an academic healthcare and research center associated with the University of Magallanes, in Punta Arenas, Chile. To minimize the impact of circadian rhythms on physiological measurements, all assessments were conducted in a controlled environment between 9:00 and 11:00 a.m.
+This study took place at the Centro Asistencial Docente e Investigacion (CADI-UMAG), the University of Magallanes academic healthcare and research center associated with the University of Magallanes, in Punta Arenas, Chile. To minimize the impact of circadian rhythms on physiological measurements, all assessments were conducted in a controlled environment between 9:00 and 11:00 a.m.
 
 The evaluation room was maintained at a consistent temperature of 20°C to ensure participant comfort and standardize testing conditions, thereby reducing potential influences of thermoregulation on autonomic responses. Consistent illumination was provided by artificial white lighting to prevent variations in ambient light that could affect visual or cognitive factors during the assessments. Furthermore, all evaluations were carried out in a private and quiet setting to minimize external distractions and enhance the reliability of the collected data.
 
@@ -75,8 +76,6 @@ Participants were recruited from the local community through advertisements and 
 
 Exclusion criteria were implemented to minimize factors that could confound autonomic measurements. Individuals were excluded if they: (i) were using beta-blockers during the study, as these medications can significantly alter autonomic and cardiovascular responses; (ii) had consumed any stimulant substances, including caffeine or sympathomimetic medications, within 12 hours prior to cardiac assessment; or (iii) had any degree of motor impairment restricting independent movement that could interfere with study procedures. Importantly, no recruited participants met these exclusion criteria.
 
-The data for this study originated from a cohort involved in FONDECYT Project No. 11220116, funded by the Chilean National Agency for Research and Development (ANID). Ethical approval was granted by the Ethics Committee of the University of Chile (ACTA No. 029 - 18/05/2022) and the Ethics Committee of the University of Magallanes (No. 008/SH/2022).
-
 ## Procedures
 
 Participants attended a single study visit after a 12-hour fast and abstaining from strenuous exercise and alcohol. Upon arrival, they provided informed consent and underwent a brief health screening to re-verify eligibility based on the inclusion/exclusion criteria, including blood pressure assessment (SBP <140 mmHg and DBP <90 mmHg).
@@ -85,7 +84,7 @@ Sociodemographic data, including name, age, sex, and any existing chronic medica
 
 Following the initial registry, body composition measurements were performed using multi-frequency bioelectrical impedance analysis (BIA) according to standardized procedures. Participants were asked to empty their bladder immediately prior to this assessment.
 
-A 4 mL peripheral venous blood sample was collected in EDTA tubes by a trained nurse. These samples were gently homogenized and kept at room temperature for subsequent immunophenotypic analysis, being processed within two hours of collection.
+A 4 mL peripheral venous blood sample was collected in EDTA tubes by a trained nurse. Importantly, this blood draw ocurred prior to any physical exertion or baseline physiological measurements, to avoid any acute exercise-induced immunological alterations. These samples were gently homogenized and kept at room temperature for subsequent immunophenotypic analysis, being processed within two hours of collection.
 
 Following a minimum 10-minute rest period in a seated position, participants were fitted with a Polar H10 heart rate monitor for continuous R-R interval recording and an Omron Hem-7142 monitor for blood pressure measurements. After baseline physiological measurements (HRV segment at rest, BP), participants performed the Two-Minute Step Test (TMST) as an acute physiological stressor. R-R intervals were recorded continuously during the 2-minute test and for a 5-minute recovery period immediately afterward. Blood pressure was measured again immediately after completion of the TMST to ensure participant safety.
 
@@ -105,7 +104,19 @@ The TMST was performed after a 10-minute rest period, followed by a 5-minute rec
 
 ### Immune Profiling and B Cell Phenotyping
 
-[...]
+To characterize B cell subpopulations, including age-associated B cells (ABCs), we used fluorochrome-conjugated monoclonal antibodies (mAbs) specific for human CD45 (Brilliant Violet 570, clone HI30, BioLegend), CD19 (FITC, clone HIB19, BioLegend), CD21 (APC A750, clone Bu32, BioLegend) and CD11c (PB 450, clone 3.9, BioLegend). A viability marker (7-AAD PC5.5, BioLegend) was also included to exclude dead cells. All antibodies were used at manufacturer-recommended concentrations.
+
+Peripheral blood samples were collected in 4 ml EDTA tubes and processed within 2 hours of collection. For each assay, 100 µL of whole blood (approximately 1×10^6^ cells) were incubated with the antibody cocktail for 30 minutes at room temperature in the dark. After staining, red blood cells were lysed by adding 125 µL of OptiLyse C (Beckman Coulter), followed by brief mixing and a 10-minute incubation in the dark. Cells were then washed with 1 mL of IsoFlow™ buffer (Beckman Coulter) to remove debris and unbound antibodies.
+
+Stained samples were acquired on a Beckman Coulter Model S flow cytometer (Beckman, CA, USA), and analyzed using FlowJo software (Tree Star, OR, USA). A minimum of 100.000 CD19^+^ events were acquired per sample. Fluorescence compensation was performed using single-stained compensation beads (BioLegend). Fluorescence minus one and isotype-matched Ab controls were used to set analysis gates.
+
+Gating strategy included sequential selection of CD45^+^ lymphocytes, exclusion of 7-AAD^+^ dead cells, and identification of CD19^+^ B cells. B cell subsets were defined based on the differential expression of CD21 and CD11c. Age-associated B cells (ABCs) were defined as CD19^+^CD11c^+^CD21^-^. Additional subsets included CD19^+^CD21^+^CD11c^-^ (naïve/central memory B cells), CD19^+^CD21^+^CD11c^+^ (activated memory B cells), and CD19^+^CD21^-^CD11c^-^ (putative anergic or dysfunctional B cells). Subset definitions were based on previously reported phenotypic profiles of human B cells [@mcgrath2024correlation; @pinto2023human].
+
+Sequential gating strategy can be observed in [Figure 1](#fig-1).
+
+![](../figures/gating/gating.png){width=100%}
+
+[**Figure 1**]{#fig-1}. Sequentual gating strategy for the identification of ABCs defined as CD19^+^CD11c^+^CD21^-^, naïve/central memory B cells as CD19^+^CD21^+^CD11c^-^, activated memory B cells CD19^+^CD21^+^CD11c^+^, and putative anergic or dysfunctional B cells as CD19^+^CD21^-^CD11c^-^. Four individual samples are shown in the last four rows depicting inter individual variability in CD21/CD11c heterogeneity with each subpopulation highlighted with corresponding marginal distributions respectively. A minimum of 100.000 CD19^+^ events were acquired per sample.
 
 ## Statistical Analysis
 
@@ -115,7 +126,7 @@ For descriptive statistics, continuous variables are summarized as mean +/- stan
 
 ### RRi-vs-Time Model
 
-To model the RR interval (RRi) across a complete rest-exercise-recovery protocol, we implemented the coupled-logistic RRi-vs-time model proposed by Castillo-Aguilar et al. (2025) [@castillo2025enhancing]. Under this specification, each observed RRi is assumed to follow a normal distribution centered on a time-dependent function. This data generation process is depicted in @eq-data-generation-process.
+In order to obtain each individual's exercise-induced CAS, we model the R-R intervals (RRi) across a complete rest-exercise-recovery protocol, as early described [@castillo2025enhancing]. Under this specification, each observed RRi is assumed to follow a normal distribution centered on a time-dependent function. This data generation process is depicted in @eq-data-generation-process.
 
 $$
 \mathrm{RRi} \sim \mathcal{N}(f(t \mid \theta_k),\,\sigma^2)
@@ -131,15 +142,15 @@ The parameter vector $\theta_k = \{\alpha,\beta,c,\lambda,\phi,\tau,\delta\}$ go
 
 ### Two-Step Modeling Strategy
 
-Our modeling proceeded in two distinct stages. First, for each participant, we obtained point estimates of the RRi-vs-time parameters (i.e., $\alpha,\beta,c,\lambda,\phi,\tau,\delta$) by fitting the RRi-vs-Time model using the R package *CardioCurveR* (v1.0.0). This package implements a box-constrained quasi-Newton algorithm with a Huber loss function for robust parameter estimation [@cardiocurverPackage].
+Our modeling proceeded in two distinct stages. First, for each individual, we obtained cardiac-autonomic signature (RRi-vs-time, $\alpha,\beta,c,\lambda,\phi,\tau,\delta$) using the R package *CardioCurveR* (v1.0.0). This package implements a box-constrained quasi-Newton algorithm with a Huber loss function for robust parameter estimation [@cardiocurverPackage].
 
-Second, after deriving individual-level point estimates $\widehat{\theta}_{ik}$ for each subject $i$ and each curve-parameter $k$, we specified two multivariate Bayesian regression models in which each component $\widehat{\theta}_{ik}$ served as a response. Concretely, for the $k$th parameter of subject $i$ we let the conditional mean
+Second, we specified two multivariate Bayesian regression models in which each invidual's cardiac-autonomic signature component ($\widehat{\theta}_{ik}$) served as a response. Concretely, for the $k$th parameter of subject $i$ we let the conditional mean
 
 $$
 \mu_{k,i} = \beta_{k,0} + \sum_{p=1}^{6} \beta_{k,p} x_{p,i}
 $${#eq-second-model}
 
-where $x_{i1},\dots,x_{i6}$ denote the six centered and scaled immune-cell predictors (absolute lymphocyte count, total B-cell count, and the four B-cell phenotypes by CD21/CD11c combinations). In the first model, we regressed $\widehat{\theta}_{ik}$ on those six immune predictors via @eq-second-model. In the second model, we extended @eq-second-model by adding four additional terms, $\beta_{k,\mathrm{age}} (\mathrm{age}_i)$, $\beta_{k,\mathrm{sex}} (\mathrm{sex}_i)$, $\beta_{k,\mathrm{fat}} (\mathrm{fat}_i)$ and $\beta_{k,\mathrm{muscle}} (\mathrm{muscle}_i)$, to account for confounding by age, sex and body composition variables when modeling RRi kinetics. Prior to fitting either multivariate model, all continuous predictors (immune counts and age) were centered to their mean and scaled by their standard deviation. We specified $\mathcal{N}(0,3)$ priors on every main-effect coefficient $\beta_{k}$ to exert a weakly regularizing influence and to mitigate the impact of outliers.
+where $x_{i1},\dots,x_{i6}$ denote the six centered and scaled immune-cell predictors (absolute lymphocyte count, total B-cell count, and the four B-cell subpopulations defined by CD21/CD11c expression). In the first model, we regressed $\widehat{\theta}_{ik}$ on those six immune predictors via @eq-second-model. In the second model, we extended @eq-second-model by adding four additional terms, $\beta_{k,\mathrm{age}} (\mathrm{age}_i)$, $\beta_{k,\mathrm{sex}} (\mathrm{sex}_i)$, $\beta_{k,\mathrm{fat}} (\mathrm{fat}_i)$ and $\beta_{k,\mathrm{muscle}} (\mathrm{muscle}_i)$, to account for confounding by age, sex and body composition variables when modeling cardiac-autonomic signatures. Prior to fitting either multivariate model, all continuous predictors (immune counts and age) were centered to their mean and scaled by their standard deviation. We specified $\mathcal{N}(0,3)$ priors on every main-effect coefficient $\beta_{k}$ to exert a weakly regularizing influence and to mitigate the impact of outliers [@lemoine2019moving].
 
 ### Model Fitting and Inference
 
@@ -181,13 +192,39 @@ model <- readRDS("../models/m_mod_2.RDS") # Adjusted model
 
 The samples consisted of 81 subjects with 70.6 ± 5.8 years old (age range, 61 to 89 years old), with 25 (30.9%) males and 56 (69.1%) females. The rest of the characteristics of the collected sample are presented in [table 1](#tab-1).
 
-[**Table 1**]{#tab-1}. Sample characteristics in sociodemographical, body composition and immunological variables.
+[**Table 1**]{#tab-1}. Sample characteristics in sociodemographical, body composition and immunological variables. Data is presented as mean ± standard deviation. Comparison for each variable between males and females is based on the standardized mean difference and its corresponding 95% confidence interval (95% CI).
 
 ```{r}
 #| echo: false
 
 data[, sex := factor(sex, levels = c("F", "M"), labels = c("Females", "Males"))]
 tbl_data <- data[, c(15:21,9:14)]
+
+tbl_data[, id := seq_len(.N)]
+
+tbl_data[, cd21_m_cd11c_m_perc := (cd21_m_cd11c_m/abc_linfocitosb_total)*100, id]
+tbl_data[, cd21_m_cd11c_p_perc := (cd21_m_cd11c_p/abc_linfocitosb_total)*100, id]
+tbl_data[, cd21_p_cd11c_m_perc := (cd21_p_cd11c_m/abc_linfocitosb_total)*100, id]
+tbl_data[, cd21_p_cd11c_p_perc := (cd21_p_cd11c_p/abc_linfocitosb_total)*100, id]
+
+tbl_data[, id := NULL]
+
+setcolorder(tbl_data, 
+            neworder = c("sex", "age",
+                         "weight", "height",
+                         "imc", "muscle_total",
+                         "fat_total",
+                         "abc_linfocitos_total",
+                         "abc_linfocitosb_total",
+                         "cd21_m_cd11c_p",
+                         "cd21_m_cd11c_p_perc",
+                         "cd21_p_cd11c_p",
+                         "cd21_p_cd11c_p_perc",
+                         "cd21_p_cd11c_m",
+                         "cd21_p_cd11c_m_perc",
+                         "cd21_m_cd11c_m",
+                         "cd21_m_cd11c_m_perc"))
+
 tbl_data |> 
   tbl_summary(by = sex,
             missing = "no",
@@ -204,25 +241,41 @@ tbl_data |>
               abc_linfocitos_total ~ "Total lymphocytes (n)",
               abc_linfocitosb_total ~ "Total B cells (n)",
               cd21_m_cd11c_p ~ "CD21- CD11c+ B cells (n)",
+              cd21_m_cd11c_p_perc ~ "CD21- CD11c+ B cells (%)",
               cd21_p_cd11c_p ~ "CD21+ CD11c+ B cells (n)",
+              cd21_p_cd11c_p_perc ~ "CD21+ CD11c+ B cells (%)",
               cd21_p_cd11c_m ~ "CD21+ CD11c- B cells (n)",
-              cd21_m_cd11c_m ~ "CD21- CD11c- B cells (n)"
+              cd21_p_cd11c_m_perc ~ "CD21+ CD11c- B cells (%)",
+              cd21_m_cd11c_m ~ "CD21- CD11c- B cells (n)",
+              cd21_m_cd11c_m_perc ~ "CD21- CD11c- B cells (%)"
             ),
-            digits = everything() ~ 2) |> 
+            digits = list(everything() ~ 2,
+                          cd21_m_cd11c_p ~ 0,
+                          cd21_p_cd11c_p ~ 0,
+                          cd21_p_cd11c_m ~ 0,
+                          cd21_m_cd11c_m ~ 0)) |> 
   add_overall() |> 
   add_difference(test = list(all_continuous() ~ "smd")) |> 
   modify_spanning_header(all_stat_cols(stat_0 = F) ~ "**Sex**") |> 
   remove_abbreviation() |> 
-  remove_footnote_header()
+  remove_footnote_header() 
 ```
+
+Notably, the proportion of age-associated B cells (ABCs; CD19^+^CD11c^+^CD21^-^) in our cohort was (3.68% ± 2.26%), a level that is comparable to that reported by McGrath et al. (2024), potentially reflecting context-dependent variation linked to population characteristics or disease state [@mcgrath2024correlation].
+
+The immunophenotypic classification of B cell subsets in our study mirrors functionally distinct states described in previous literature: CD21^+^CD11c^-^ cells are typically associated with naïve or central memory phenotypes, whereas CD21^-^CD11c^+^ and CD21^-^CD11c^-^ subsets have been linked to heightened activation, antigen experience, or anergic/exhausted profiles [@sosa2022cd11c; @tangye2009memory].
+
+These findings are consistent with earlier reports demonstrating an expansion of ABCs in the context of aging and autoimmune conditions, reinforcing their relevance as immunological biomarkers [@pinto2023human].
+
+A detailed characterization aggregated by age and sex can be observed in Figure S1, found in section "B Cell Subpopulation Distribution" in the supplementary material.
 
 ## Exercise-Induced Cardiac Autonomic Trajectory
 
-Exercise elicits a U-shaped form on RRi during a rest-exercise-recovery protocol. This shape is controlled by the model parameters depicted in [Figure 2](#fig-2). <!--- Figure 1 will be gating strategy for B cell CD21 and CD11c --->
+Exercise elicits a U-shaped form on RRi during a rest-exercise-recovery protocol. This shape is controlled by the model parameters depicted in [Figure 2](#fig-2).
 
 ![](../figures/hand-designed/rri-curve.png){width=100%}
 
-[**Figure 2**]{#fig-2}. Cardiac autonomic trajectories given by RRi dynamics in response to exercise as described by the RRi-vs-time model. This image also depicts the rest-exercise-recovery protocol used to induce the autonomic changes in response to physical exertion. The parameters $\alpha,\beta,c$ control the magnitude of change, $\lambda,\phi$ control the steepnees or speed of change, and $\tau,\delta$ control de timing of these changes in RRi dynamics.
+[**Figure 2**]{#fig-2}. Cardiac Autonomic Signature given by RRi dynamics in response to exercise as described by the RRi-vs-time model. The image also depicts the rest-exercise-recovery protocol used to induce the autonomic changes in response to physical exertion. Parameters $\alpha,\beta,c$ control the magnitude of change, $\lambda,\phi$ control the steepnees or speed of change, and $\tau,\delta$ control de timing of these changes in RRi dynamics.
 
 <!--- ## See output from "R/rri-characteristics.R"
    Parameters Estimate    SE               CI
@@ -244,11 +297,11 @@ For time parameters controlling the timing of the aforementioned RRi kinetics, w
 
 ## B Cell Expression on Cardiac Autonomic-Immune Axis
 
-The overall exercise-induced RRi trajectory, previously described in the form of the parameters controlling the shape of the cardiac autonomic response, is transiently modified in the face of different quantities of B cell phenotypes. The specific morphological changes of the RRi-vs-time curve are dependent on the independent variation of both CD21 and CD11c B cell markers. The main immune-autonomic signatures derived by different B cell expression profiles can be seen in [Figure 3](#fig-3).
+The overall exercise-induced Cardiac Autonomic Signature is associated with the distribution of distinct B cell subsets. The specific morphological changes of the RRi-vs-time curve are dependent on the independent variation of both CD21 and CD11c B cell markers. The main immune-autonomic associations derived by different B cell subsets can be seen in [Figure 3](#fig-3).
 
 ![](../figures/hand-designed/rri-signatures.png){width=100%}
 
-[**Figure 3**]{#fig-3}. Exercise-induced RRi signatures dependent on B cell counts with CD21 and CD11c expressions. Each RRi-vs-time curve correspond to the simulation of RRi dynamics based on the predicted model parameters for the corresponding combination of B cell phenotypes (of CD21 and CD11c) below and above two standard deviations, while keeping the remaining cell markers counts constant at their mean. Depicted effects are adjusted for confounding variables.
+[**Figure 3**]{#fig-3}. Predicted exercise-induced RRi signatures, dependent on CD21 and CD11c B cell expressions. Each RRi-vs-time curve correspond to the estimated Cardiac Autonomic Signature (line: median, shaded area: 95% high density interval, HDI) for the corresponding combination of B cell phenotypes (of CD21 and CD11c) below and above two standard deviations (blue and violet shaded areas), while keeping the remaining cell markers counts constant at their mean. Depicted effects are adjusted for confounding variables.
 
 ### CD21^+^ / CD11c^-^
 
@@ -258,7 +311,7 @@ The overall exercise-induced RRi trajectory, previously described in the form of
 report_model(model, variable = "cd21_p_cd11c_m")
 ```
 
-Individuals that have more B cells with CD21, but not CD11c markers, seems to have more than 80% probability of having a less pronounced decrease in RRi (ES on $\beta$ = -0.45, CI~95%~[-1.29, 0.32], pd = 86%, ps = 80.2%), as well as a more steep exercise-induced RRi drop (ES on $\lambda$ = 0.43, CI~95%~[-0.41, 1.29], pd = 83.7%, ps = 77.3%) and recovery (ES on $\phi$ = 0.49, CI~95%~[-0.36, 1.34], pd = 87.8%, ps = 82.2%).
+A higher proportion of CD21^+^CD11c^-^ B cells, typically representing naïve or central memory phenotypes, were associated with more than 80% posterior probability of having a less pronounced decrease in RRi (ES on $\beta$ = -0.45, CI~95%~[-1.29, 0.32], pd = 86%, ps = 80.2%), and a steeper exercise-induced autonomic transition, both at onset (ES on $\lambda$ = 0.43, CI~95%~[-0.41, 1.29], pd = 83.7%, ps = 77.3%) and recovery (ES on $\phi$ = 0.49, CI~95%~[-0.36, 1.34], pd = 87.8%, ps = 82.2%). 
 
 ### CD21^+^ / CD11c^+^
 
@@ -268,7 +321,7 @@ Individuals that have more B cells with CD21, but not CD11c markers, seems to ha
 report_model(model, variable = "cd21_p_cd11c_p")
 ```
 
-For individuals with more expression of both CD21 and CD11c (i.e., double positive), we observed a 99.5% posterior probability of higher RRi at rest (ES on $\alpha$ = 0.48, CI~95%~[0.11, 0.84], pd = 99.5%, ps = 97.9%), 97.3% posterior probability of more pronounced exercise-induced RRi decrease (ES on $\beta$ = 0.34, CI~95%~[0, 0.71], pd = 97.3%, ps = 91.5%), 91.5% posterior probability of less post-exercise RRi recovery proportion (ES on $c$ = -0.24, CI~95%~[-0.6, 0.1], pd = 91.5%, ps = 79.1%) and 90.5% posterior probability of higher duration of RRi depression till recovery kinetics begin, relative to the RRi drop (ES on $\delta$ = 0.26, CI~95%~[-0.12, 0.67], pd = 90.5%, ps = 79.5%).
+In contrast, CD21^+^CD11c^+^ B cells, linked to activated or antigen-experienced states, were associated with a 99.5% posterior probability of higher RRi at rest (ES on $\alpha$ = 0.48, CI~95%~[0.11, 0.84], pd = 99.5%, ps = 97.9%), 97.3% posterior probability of more pronounced exercise-induced RRi decrease (ES on $\beta$ = 0.34, CI~95%~[0, 0.71], pd = 97.3%, ps = 91.5%), 91.5% posterior probability of incomplete post-exercise RRi recovery (ES on $c$ = -0.24, CI~95%~[-0.6, 0.1], pd = 91.5%, ps = 79.1%) and 90.5% posterior probability of prolonged RRi depression following exertion (ES on $\delta$ = 0.26, CI~95%~[-0.12, 0.67], pd = 90.5%, ps = 79.5%).
 
 ### CD21^-^ / CD11c^-^
 
@@ -278,7 +331,7 @@ For individuals with more expression of both CD21 and CD11c (i.e., double positi
 report_model(model, variable = "cd21_m_cd11c_m")
 ```
 
-On the other side, individuals with higher counts of B cells absent of CD21 or CD11c markers (i.e., double negative) had 93.5% posterior probability of lower resting RRi (ES on $\alpha$ = -0.31, CI~95%~[-0.7, 0.09], pd = 93.5%, ps = 84.7%), 98.2% posterior probability of less exercise-induced RRi decrease (ES on $\beta$ = -0.41, CI~95%~[-0.8, -0.02], pd = 98.2%, ps = 94.2%), 96.1% posterior probability of better post-exercise recovery (ES on $c$ = 0.34, CI~95%~[-0.04, 0.72], pd = 96.1%, ps = 89.2%), 98% posterior probability of steeper RRi drop (ES on $\lambda$ = 0.44, CI~95%~[-0.01, 0.84], pd = 98%, ps = 94.4%) and 92.8% posterior probability of early initiation of cardiac autonomic kinematics (ES on $\tau$= -0.3, CI~95%~[-0.68, 0.14], pd = 92.8%, ps = 83.5%).
+The CD21^-^CD11c^-^ subset, often associated with anergic or exhausted B cells, was linked to 93.5% posterior probability of lower baseline vagal tone (ES on $\alpha$ = -0.31, CI~95%~[-0.7, 0.09], pd = 93.5%, ps = 84.7%), but also a 98.2% posterior probability of less marked exercise-induced RRi drop (ES on $\beta$ = -0.41, CI~95%~[-0.8, -0.02], pd = 98.2%, ps = 94.2%), with a 96.1% posterior probability of a more complete post-exercise recovery (ES on $c$ = 0.34, CI~95%~[-0.04, 0.72], pd = 96.1%, ps = 89.2%). In addition, these cells were associated with a 98% posterior probability of steeper RRi drop (ES on $\lambda$ = 0.44, CI~95%~[-0.01, 0.84], pd = 98%, ps = 94.4%) and 92.8% posterior probability of early onset (ES on $\tau$= -0.3, CI~95%~[-0.68, 0.14], pd = 92.8%, ps = 83.5%).
 
 ### CD21^-^ / CD11c^+^
 
@@ -288,7 +341,7 @@ On the other side, individuals with higher counts of B cells absent of CD21 or C
 report_model(model, variable = "cd21_m_cd11c_p")
 ```
 
-For B cells with more CD11c expression, but not CD21, we observed that greater counts of this cell phenotype were associated 73% posterior probability of having a slower, or less steep, RRi drop initiated by exercise (ES on $\lambda$ = -0.24, CI~95%~[-0.61, 0.13], pd = 90.2%, ps = 76.8%) and 95.9% posterior probability of observing a delay in exercise-induced cardiac autonomic kinematics (ES on $\tau$ = 0.32, CI~95%~[-0.04, 0.68], pd = 95.9%, ps = 88.7%).
+Finally, a greater proportion of CD21^-^CD11c^+^ B cells, commonly described as age-associated B cells (ABCs), were associated with a 73% posterior probability of having a less steep RRi drop (ES on $\lambda$ = -0.24, CI~95%~[-0.61, 0.13], pd = 90.2%, ps = 76.8%) and 95.9% posterior probability of delayed onset of autonomic engagement (ES on $\tau$ = 0.32, CI~95%~[-0.04, 0.68], pd = 95.9%, ps = 88.7%).
 
 The posterior distribution for each effect for all B cell phenotypes on the different parameters controlling the exercise-induced RRi dynamics can be seen in [Figure 4](#fig-4).
 
@@ -326,6 +379,8 @@ This study offers a novel contribution by integrating autonomic physiology, thro
 
 However, several limitations warrant consideration. The cross-sectional design of our study precludes the establishment of causal inferences between the observed immune and autonomic characteristics. Furthermore, while surface marker-based phenotyping allowed for the identification of specific B-cell subpopulations, it did not elucidate their functional or mechanistic relevance. The absence of functional assays or transcriptomic profiling to complement the flow cytometry data, along with the unquantified potential for batch or gating effects, represents a further limitation. Methodologically, our two-stage modeling pipeline did not propagate posterior uncertainty between steps, underscoring the need for future work employing fully joint hierarchical inference.
 
+As CD21/CD11c-defined B cell subsets are mutually exclusive by definition, changes in one subpopulation necessarily imply reciprocal changes in the others. While our multivariate Bayesian model estimates marginal effects by standardizing and adjusting for all predictors simultaneously, the simulated trajectories shown in Figure 3 represent theoretical contrasts in which a single subpopulation is increased while others are held at their mean. This approach facilitates interpretation but does not reflect biologically possible immune configurations, and future modeling strategies may benefit from compositional or constraint-based approaches.
+
 Moving forward, future research should aim to overcome these limitations by employing longitudinal study designs to explore causality, and incorporating functional and mechanistic analyses to understand the roles of the identified B-cell populations to further elucidate the complex interplay between the immune and autonomic systems in aging.
 
 # Conclusion
@@ -338,15 +393,15 @@ This research suggests that B cell subpopulations reflect and potentially modula
 
 # Author Contributions
 
-Conceptualization, MC-A, CN-E; Data curation, MC-A; Investigation, MC-A, CN-E; Methodology, MC-A, CN-E; Supervision, CN-E; Formal analysis, MC-A; Visualization, MC-A; Writing–original draft, MC-A, CN-E; Writing–review & editing, MC-A, CN-E, [...]. All authors have read and agreed to the published version of the manuscript.
+Conceptualization, MC-A, CN-E; Data curation, MC-A; Investigation, MC-A, CN-E; Methodology, MC-A, CN-E; Supervision, CN-E; Formal analysis, MC-A; Visualization, MC-A, LS; Writing–original draft, MC-A, CN-E; Writing–review & editing, MC-A, GV, LS, JS, MN & CN-E. All authors have read and agreed to the published version of the manuscript.
 
 # Funding
 
-This work was funded by ANID Proyecto Fondecyt Iniciación Nº11220116.
+This work was funded by ANID Proyecto Fondecyt Regular Nº1250474 and by the Innovation Fund for Competitiveness of the Regional Government of Magallanes and Chilean Antarctica (BIP Code 40042452-0).
 
 # Institutional Review Board Statement
 
-Ethical approval was obtained from the Ethics Committee of the University of Chile (ACTA No. 029 − 18/05/2022) and the Ethics Committee of the University of Magallanes (No. 008/SH/2022).
+Ethical approval was obtained from the Ethics Committee of the University of Magallanes (No. 001/SH/2025).
 
 # Informed Consent Statement
 

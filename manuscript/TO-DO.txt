@@ -1,0 +1,8 @@
+Por hacer:
+
+- [x] (paper) Añadir figura de Gating-strategy.
+- [x] (paper) Añadir los porcentajes en la tabla principal.
+- [x] (paper) Incorporar la discusion de julieta en la discusion (sacarla de los resultados).
+- [x] (paper) Revisar las referencias.
+- [x] (paper) Actualizar sección de "Author Contributions".
+- [x] (paper) Revisar los codigos del comité de ética.

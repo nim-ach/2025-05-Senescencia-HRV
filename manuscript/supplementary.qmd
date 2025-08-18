@@ -9,12 +9,17 @@ format:
 
 **Title**: Immune-Derived Signatures of RR-Interval Dynamics: Predicting Autonomic Responses from CD21/CD11c B-Cell Subsets
 
-**Authors**: Matías Castillo-Aguilar,^1,2^ ..., Cristian Núñez-Espinosa,^1,2^ \*
+**Authors**: Matías Castillo-Aguilar^1,2^, Ginés Viscor^3^, Lindybeth Sarmiento^1,2^, Julieta Sepúlveda^1,4^, Marcelo Navarrete^1,2^, Cristian Núñez-Espinosa^1,2^ \*
 
 ::: {custom-style="Afiliation"}
 ^1^ Centro Asistencial Docente y de Investigación (CADI-UMAG), Punta Arenas, Chile.
 
-^2^ Escuela de Medicina, Universidad de Magallanes (UMAG), Punta Arenas, Chile
+^2^ Escuela de Medicina, Universidad de Magallanes (UMAG), Punta Arenas, Chile.
+
+^3^ Physiology Section, Department of Cell Biology, Physiology and
+Immunology, Faculty of Biology, Universitat de Barcelona, Barcelona, Spain.
+
+^4^ Facultad de Ciencias de la Salud, Universidad de Magallanes (UMAG), Punta Arenas, Chile.
 :::
 
 ### \*Correspondence
@@ -46,6 +51,14 @@ m_sim <- readRDS("../models/m_mod_1.RDS") # Adjusted model
 m_adj <- readRDS("../models/m_mod_2.RDS") # Adjusted model
 ```
 
+# B Cell Subpopulation Distribution
+
+To explore age-associated changes in B cell subsets, we analyzed the absolute number of four defined subpopulations across age quartiles. The predominant subset in all groups was CD21⁺CD11c⁻ cells, with the highest mean count observed in the youngest quartile (Q1: 9,855 ± 5,198) and a slight decline in older groups (Q4: 7,479 ± 5,686). The CD21⁻CD11c⁺ subset, often associated with age-related or atypical B cells, showed a modest decrease with age (Q1: 774 ± 427 vs. Q4: 581 ± 412). Similarly, CD21⁺CD11c⁺ cells also declined across quartiles (Q1: 362 ± 254 vs. Q4: 292 ± 223). The smallest population, CD21⁻CD11c⁻, exhibited a consistent but modest reduction in cell count with age (Q1: 261 ± 182 vs. Q4: 131 ± 61). These findings suggest a gradual reshaping of the peripheral B cell compartment with aging, characterized by a relative decline of CD21-expressing subsets. Aggregated absolute cell counts by age quartiles and sex can be [Figure S1](#fig-s1).
+
+![](../figures/fig_b_cell_dist.png){width=100%}
+
+[**Figure S1**]{#fig-s1}. Distribution of B cell subpopulation counts across age quartiles (A) and sex (B). Each dot represents an individual; boxes indicate the interquartile range (IQR), and whiskers denote 1.5×IQR. Counts are shown for four phenotypic B cell subsets defined by CD21 and CD11c expression. F, female; M, male. 
+
 # Characterization of Model Estimates
 
 In the following sections, we present the model estimates associated with the neuro-immune interactions and its effects on exercise-induced cardiac autonomic modulation.
@@ -55,7 +68,7 @@ In the following sections, we present the model estimates associated with the ne
 First, we fitted a simple model without covariates. The standardized effects on the model parameters controlling the observed cardiac autonomic response to exercise can be seen in [Figure S1](#fig-s1) and [Table S1](#tab-s1), respectively.
 
 ![](../figures/fig_params_vs_immune_simple.png){width=100%}
-[**Figure S1**]{#fig-s1}. Posterior distribution of the simple model on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of B-cell phenotypes quantities, CD21 and CD11c. The shaded area correspond to the range of practical equivalence (ROPE), denoted as 0.1 standardized units. $\alpha$, denotes the baseline RRi level at rest; $\beta$, denotes the exercise-induced drop in the RRi; $c$, denotes the recovery proportion, relative to $\beta$; $\lambda$ and $\phi$ denote the exercise-induced drop and recovery rate paramters; $\tau$ and $\delta$ denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
+[**Figure S2**]{#fig-s1}. Posterior distribution of the simple model on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of B-cell phenotypes quantities, CD21 and CD11c. The shaded area correspond to the range of practical equivalence (ROPE), denoted as 0.1 standardized units. $\alpha$, denotes the baseline RRi level at rest; $\beta$, denotes the exercise-induced drop in the RRi; $c$, denotes the recovery proportion, relative to $\beta$; $\lambda$ and $\phi$ denote the exercise-induced drop and recovery rate paramters; $\tau$ and $\delta$ denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
 
 [**Table S1**]{#tab-s1}. Model estimates on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of total, B and CD21 and CD11c B lymphocytes. Model effects are displayed unadjusted. *alpha*, denotes the baseline RRi level at rest; *beta*, denotes the exercise-induced drop in the RRi; *c*, denotes the recovery proportion, relative to *beta*; *lambda* and *phi* denote the exercise-induced drop and recovery rate paramters; *tau* and *delta* denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
 ```{r}
@@ -96,14 +109,14 @@ summary_model(m_sim, variable = "^rescor_")[,-6L] |>
 The predicted cardiac autonomic kinetics to the full rest-exercise-recovery dynamics can be observed in [Figure S2](#fig-s2).
 
 ![](../figures/fig_rri_signatures_simple.png){width=100%}
-[**Figure S2**]{#fig-s2}. Predicted cardiac autonomic signatures display different patterns dependent on the amounts of CD21 and CD11c B cell phenotypes (standardized units) and their corresponding cell subsets. These predicted dynamics are unadjusted.
+[**Figure S3**]{#fig-s2}. Predicted cardiac autonomic signatures display different patterns dependent on the amounts of CD21 and CD11c B cell phenotypes (standardized units) and their corresponding cell subsets. These predicted dynamics are unadjusted.
 
 ## Adjusted effects
 
 Finally, the last fitted model was adjusted considering the influence of sex age, and body composition as covariates. The adjusted standardized effects on the model parameters controlling the observed cardiac autonomic response to exercise can be seen in [Figure S3](#fig-s3) and [Table S3](#tab-s3), respectively.
 
 ![](../figures/fig_params_vs_immune_adjusted.png){width=100%}
-[**Figure S3**]{#fig-s3}. Posterior distributions of the adjusted model on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of B-cell phenotypes quantities, CD21 and CD11c. The shaded area correspond to the range of practical equivalence (ROPE), denoted as 0.1 standardized units. $\alpha$, denotes the baseline RRi level at rest; $\beta$, denotes the exercise-induced drop in the RRi; $c$, denotes the recovery proportion, relative to $\beta$; $\lambda$ and $\phi$ denote the exercise-induced drop and recovery rate paramters; $\tau$ and $\delta$ denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
+[**Figure S4**]{#fig-s3}. Posterior distributions of the adjusted model on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of B-cell phenotypes quantities, CD21 and CD11c. The shaded area correspond to the range of practical equivalence (ROPE), denoted as 0.1 standardized units. $\alpha$, denotes the baseline RRi level at rest; $\beta$, denotes the exercise-induced drop in the RRi; $c$, denotes the recovery proportion, relative to $\beta$; $\lambda$ and $\phi$ denote the exercise-induced drop and recovery rate paramters; $\tau$ and $\delta$ denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
 
 [**Table S3**]{#tab-s3}. Model estimates on the parameter values associated with the exercise-induced cardiac autonomic response and the associated effects of total, B and CD21 and CD11c B lymphocytes. Model effects are displayed adjusted by sex, age and body composition. *alpha*, denotes the baseline RRi level at rest; *beta*, denotes the exercise-induced drop in the RRi; *c*, denotes the recovery proportion, relative to *beta*; *lambda* and *phi* denote the exercise-induced drop and recovery rate paramters; *tau* and *delta* denote the timing parameters, that controls when the drop occurs and the time duration of the exercise-induced depression on RRi.
 ```{r}
@@ -148,5 +161,5 @@ summary_model(m_adj, variable = "^rescor_")[,-6L] |>
 Moreover, the predicted cardiac autonomic kinetics to the full rest-exercise-recovery dynamics, adjusted by confounders, can be observed in [Figure S4](#fig-s4).
 
 ![](../figures/fig_rri_signatures_adjusted.png){width=100%}
-[**Figure S4**]{#fig-s4}. Predicted cardiac autonomic signatures display different patterns dependent on the amounts of CD21 and CD11c B cell phenotypes (standardized units) and their corresponding cell subsets. These predicted dynamics are adjusted for sex and age. 
+[**Figure S5**]{#fig-s4}. Predicted cardiac autonomic signatures display different patterns dependent on the amounts of CD21 and CD11c B cell phenotypes (standardized units) and their corresponding cell subsets. These predicted dynamics are adjusted for sex and age. 
 
